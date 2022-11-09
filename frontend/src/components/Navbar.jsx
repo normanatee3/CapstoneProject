@@ -9,12 +9,15 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from "react-router-dom";
 import * as userService from "../utilities/users-service";
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
+import {useNavigate} from "react-router-dom"
 
 
 
 // CREATE COMPONENT
 const NavBar = ({ setShow, user, setUser, getMovies }) => {
+
+    const navigate = useNavigate()
+
     // Create a function responsible for logging the user out
     const handleLogOut = () => {
         // Call the logout function
@@ -22,13 +25,14 @@ const NavBar = ({ setShow, user, setUser, getMovies }) => {
 
         // Set the user back to null
         setUser(null);
+        navigate('/login')
     };
 
     // console.log(user);
     return (
-        <Navbar sticky="top" bg="dark" collapseOnSelect expand="lg" variant="dark">
+        <Navbar  bg="dark" collapseOnSelect expand="lg" variant="dark">
             <Container>
-                <Navbar.Brand as={Link} to="/home" >CoLab</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/home" ><img className="d-inline-block align-top" width="60" height="40" src="https://images.squarespace-cdn.com/content/v1/6260c09554aa491baf4c0fba/dfea8b4b-1050-408a-8e53-53d4cff62b57/Colab_Logos__Main_White.png" alt="Card image" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
