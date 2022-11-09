@@ -3,15 +3,10 @@ import React from 'react'
 
 function Footer() {
     return (
-        <footer className="page-footer bg-dark text-secondary font-small blue pt-4">
+        <footer className="page-footer  bg-dark text-secondary font-small blue pt-4">
             <div className="container-fluid text-center text-md-left">
                 <div className="row">
-                    <div className="col-md-6 mt-md-0 mt-3">
-                        <h5 className="">CoLab ON A PROJECT </h5>
-                        <p> Find us on Social Media!</p>
-                    </div>
-                    <hr className="clearfix w-100 d-md-none pb-0" />
-                    <div className="col-md-3 mb-md-0 mb-3">
+                <div className="col-md-3 mb-md-0 mb-3">
                         <h5 className="text-uppercase">Normans Links</h5>
                         <ul className="list-unstyled">
                             <li><a
@@ -32,6 +27,12 @@ function Footer() {
                             {/* <li><a href="#!">Link 4</a></li> */}
                         </ul>
                     </div>
+                    <div className="col-md-6 mt-md-0 mt-3">
+                        <h5 className="">CoLab ON A PROJECT </h5>
+                        <p> Find us on Social Media!</p>
+                    </div>
+                    <hr className="clearfix w-100 d-md-none pb-0" />
+                    
                     <div className="col-md-3 mb-md-0 mb-3">
                         <h5 className="text-uppercase">colab Links</h5>
                         <ul className="list-unstyled">

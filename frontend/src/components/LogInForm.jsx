@@ -3,13 +3,14 @@ import { useState } from 'react';
 import * as usersService from '../utilities/users-service';
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import {useNavigate} from "react-router-dom"
 
 function LogInForm({ setUser, showLogin, setShowLogin }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
     const [error, setError] = useState('');
 
+    const navigate = useNavigate()
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
@@ -27,6 +28,7 @@ function LogInForm({ setUser, showLogin, setShowLogin }) {
             // The promise returned by signUp service method will resolve to user object included in the payload of JSON Web Token (JWT)
             const user = await usersService.login({email, password});
             setUser(user.data);
+            navigate('/home')
         } catch (error) {
             setError(error.message);
         }
