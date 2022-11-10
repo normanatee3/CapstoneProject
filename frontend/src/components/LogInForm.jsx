@@ -72,7 +72,7 @@ function LogInForm({ setUser, showLogin, setShowLogin }) {
                     <p onClick={()=>setShowLogin(!showLogin)} className="ref">Don't have an account? Sign up here</p>
                 </form>
             </div>
-            <p className="error-message">{error}</p>
+            <p className="text-light error-message">{error}</p>
         </div>
     )
 }

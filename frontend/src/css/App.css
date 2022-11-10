@@ -183,3 +183,26 @@ form {
     margin-right: 25%;
     margin-bottom: 4%;
 }
+.fullPage{
+    height: 80vh;
+}
+
+.titleBanner{
+    height: 150px;
+    margin-top: 50px;
+    border-top:  5px solid #353552;
+    border-bottom:  5px solid #353552;
+    align-items: center;
+    color: white;
+}
+.titleImage{
+    opacity: .5;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/002/376/116/original/hi-tech-background-vector.jpg');
+    background-size: cover;
+}
+.titleText{
+    position: relative;
+    bottom: 80%;
+}

@@ -8,7 +8,7 @@ const bcrypt = require('bcryptjs')
 // Use mongoose to create userSchema
 const userSchema = new mongoose.Schema(
     {
-        name: { type: String, required: [true, 'Each user must have a name'] },
+        name: { type: String, unique: true, required: [true, 'Each user must have a name'] },
         email: { type: String, trim: true, unique: true, lowercase: true, required: [true, 'Email is a required field'] },
         password: { type: String, trim: true, minLength: [3, "Password must be at least 3 characters"], required: [true, 'Password is a required field'], select: false },
     },
