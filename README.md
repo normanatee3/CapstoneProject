@@ -10,10 +10,10 @@ CoLab is a platform for engineers and devs to share their projects and questions
 
 ## Tech/framework used
 <b>Built with</b>
-JavaScript
-React
-Bootstrap
-React-Bootstrap
+JavaScript  
+React  
+Bootstrap  
+React-Bootstrap  
 
 <!-- - [Electron](https://electron.atom.io) -->
 
