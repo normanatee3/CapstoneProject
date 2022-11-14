@@ -9,7 +9,7 @@ CoLab is a platform for engineers and devs to share their projects and questions
 <!-- ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true) -->
 
 ## Tech/framework used
-<b>Built with</b>
+<b>Built with</b>  
 JavaScript  
 React  
 Bootstrap  
