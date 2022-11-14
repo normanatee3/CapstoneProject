@@ -3,7 +3,6 @@ import * as usersAPI from "./users-api"
 export async function signUp(userData) {
     // make network request
     const response = await usersAPI.signUp(userData)
-
     // retrieve the token
     const data = response.data
     // add token to local

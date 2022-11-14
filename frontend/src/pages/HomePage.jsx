@@ -1,8 +1,12 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import {useNavigate} from "react-router-dom"
 
 function HomePage() {
+  const navigate = useNavigate()
+  const toForum = () =>{
+    navigate('/forum')
+  }
   return (
     <div>
       <Card className="bg-dark text-white homeCard">
@@ -12,7 +16,7 @@ function HomePage() {
         <Card.Text className='mid'>
           CoLab is a platform for engineers and devs to share their projects and questions, and find in-context, community driven answers, potential collaborators, inspiration and feedback on their work.
         </Card.Text>
-        <button role="button" className="button-49">Join the Conversation</button>
+        <button  onClick={toForum} className="button-49">Join the Conversation</button>
       </Card.ImgOverlay>
     </Card>
     </div>

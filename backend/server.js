@@ -11,6 +11,8 @@ dotenv.config()
 const port = process.env.PORT
 const morgan = require('morgan')
 const userRouter = require('./routes/api/users')
+const postRouter = require('./routes/api/posts')
+const eventRouter = require('./routes/api/events')
 // connect to mongo
 mongoose.connect(process.env.DATABASE).then(()=>{
     console.log("Connected to mongo")
@@ -25,6 +27,8 @@ app.use(express.json())
 
 // router middleware
 app.use("/api/users", userRouter)
+app.use("/api/posts", postRouter)
+app.use("/api/events", eventRouter)
 
 
 // server listener

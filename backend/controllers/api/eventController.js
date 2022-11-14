@@ -1,13 +1,13 @@
-const Post = require('../../models/postModel')
+const Event = require('../../models/eventModel')
 
-exports.createPost = async (req, res) => {
+exports.createEvent = async (req, res) => {
     try {
-        const newPost = await Post.create({
+        const newEvent = await Event.create({
             creator_email: req.body.creator_email,
             creator_name: req.body.creator_name,
-            category: req.body.category,
+            date: req.body.date,
             title: req.body.title,
-            description: req.body.description
+            link: req.body.link
         })
         // Send JSON RESPONSE
         res.status(201).json({
@@ -21,13 +21,13 @@ exports.createPost = async (req, res) => {
         })
     }
 }
-exports.getNewPosts = async (req, res) => {
+exports.getNewEvents = async (req, res) => {
     try {
-        const Posts = await Post.find({}).sort({createdAt: -1}).limit(3)
+        const Events = await Event.find({}).sort({createdAt: -1}).limit(3)
         // Send JSON RESPONSE
         res.status(201).json({
             status: "success",
-            data: Posts
+            data: Events
         })
     } catch (error) {
         console.log(error);
@@ -37,13 +37,13 @@ exports.getNewPosts = async (req, res) => {
         })
     }
 }
-exports.getAllPosts = async (req, res) => {
+exports.getAllEvents = async (req, res) => {
     try {
-        const Posts = await Post.find({})
+        const Events = await Event.find({}).sort({createdAt: -1})
         // Send JSON RESPONSE
         res.status(201).json({
             status: "success",
-            data: Posts
+            data: Events
         })
     } catch (error) {
         console.log(error);
@@ -53,13 +53,13 @@ exports.getAllPosts = async (req, res) => {
         })
     }
 }
-exports.getOnePost = async (req, res) => {
+exports.getOneEvent = async (req, res) => {
     try {
-        const onePost = await Post.findById(req.params.postId).exec()
+        const oneEvent = await Event.findById(req.params.eventId).exec()
         // Send JSON RESPONSE
         res.status(201).json({
             status: "success",
-            data: onePost
+            data: oneEvent
         })
     } catch (error) {
         console.log(error);
@@ -69,13 +69,13 @@ exports.getOnePost = async (req, res) => {
         })
     }
 }
-exports.updateOnePost = async (req, res) => {
+exports.updateOneEvent = async (req, res) => {
     try {
-        const updatedPost = await Post.findByIdAndUpdate(req.params.postId, req.body).exec()
+        const updatedEvent = await Event.findByIdAndUpdate(req.params.eventId, req.body).exec()
         // Send JSON RESPONSE
         res.status(201).json({
             status: "success",
-            data: updatedPost
+            data: updatedEvent
         })
     } catch (error) {
         console.log(error);
@@ -85,13 +85,13 @@ exports.updateOnePost = async (req, res) => {
         })
     }
 }
-exports.deleteOnePost = async (req, res) => {
+exports.deleteOneEvent = async (req, res) => {
     try {
-        const deletedPost = await Post.findByIdAndRemove(req.params.postId, req.body).exec()
+        const deletedEvent = await Event.findByIdAndRemove(req.params.eventId, req.body).exec()
         // Send JSON RESPONSE
         res.status(201).json({
             status: "success",
-            data: deletedPost
+            data: deletedEvent
         })
     } catch (error) {
         console.log(error);
