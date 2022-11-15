@@ -1,9 +1,9 @@
 const Categories = [
-    "None",
+    "Miscellaneous",
     "Beginners",
-    "Brainstorm/Concept",
+    "Brainstorm-Concept",
     "Community",
-    "Debug/Testing",
+    "Debug-Testing",
     "Design",
     "Language",
     "Suggestions",

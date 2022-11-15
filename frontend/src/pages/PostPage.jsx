@@ -17,6 +17,9 @@ function PostPage() {
   }
 
   const navigate = useNavigate();
+  const toForum = () =>{
+    navigate('/forum')
+  }
 
   const deletePost = () =>{
     axios.delete(`/api/posts/${params.postId}`).then(()=>{
@@ -60,12 +63,12 @@ function PostPage() {
                   <Card.Text >Last Edit: {new Date(onePost.updatedAt).toLocaleString()}</Card.Text></Container>
                   <br />
                 <Container className='postButtons'>
-
+                
                 <button className='buttonMini' onClick={showEditPostForm}>EDIT</button>
                 <button className='buttonMini' onClick={deletePost}>DELETE</button>
                 </Container>
                 </Card>
-                <button className="buttonMini">BACK TO POSTS</button>
+                <button onClick={toForum} className="buttonMini">BACK TO POSTS</button>
               </div>
             </>
           }

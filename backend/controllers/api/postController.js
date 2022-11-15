@@ -39,11 +39,27 @@ exports.getNewPosts = async (req, res) => {
 }
 exports.getAllPosts = async (req, res) => {
     try {
-        const Posts = await Post.find({})
+        const Posts = await Post.find({}).sort({createdAt: -1})
         // Send JSON RESPONSE
         res.status(201).json({
             status: "success",
             data: Posts
+        })
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({
+            status: "error",
+            error: error,
+        })
+    }
+}
+exports.getCatPosts = async (req, res) => {
+    try {
+        const catPosts = await Post.find({category: req.params.cat}).exec()
+        // Send JSON RESPONSE
+        res.status(201).json({
+            status: "success",
+            data: catPosts
         })
     } catch (error) {
         console.log(error);
