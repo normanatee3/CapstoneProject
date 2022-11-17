@@ -4,8 +4,9 @@
 ## Motivation
 CoLab is a platform for engineers and devs to share their projects and questions, and find in-context, community driven answers, potential collaborators, inspiration and feedback on their work.
  
-## Screenshots
--Coming soon-
+## Wireframe
+-Completed in [DrawIO](https://drive.google.com/file/d/1QAZCyRT30bZim5CaAmQXeGosxd-Uu08b/view?usp=sharing)
+
 <!-- ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true) -->
 
 ## Tech/framework used
@@ -17,8 +18,21 @@ React-Bootstrap
 
 <!-- - [Electron](https://electron.atom.io) -->
 
-<!-- ## Features
-What makes your project stand out? -->
+## Future Enhancements
+-Expansion to be a space fostering and centralizing community development through integrating technologies such as:  
+  
+-Trello  
+-Discord  
+-Slack  
+-Twitch  
+  
+And features like:  
+  
+-Karma
+-Followings
+-Project spotlights
+-Free/Community events, lectures, and challenges
+
 
 <!-- ## Code Example
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
